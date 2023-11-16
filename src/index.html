@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end google font -->
+  </head>
+  <body class="font-Roboto bg-slate-800">
+    <section class="flex min-h-screen items-center justify-center">
+      <div
+        class="app w-full max-w-[350px] rounded-xl bg-gradient-to-br from-emerald-500 from-60% to-cyan-500 to-100% p-6 shadow-md"
+      >
+        <!-- input field -->
+        <form class="input flex items-center gap-3">
+          <label for="search"></label>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Enter city name..."
+            class="w-full rounded-3xl border border-transparent px-4 py-2 outline-none focus:border focus:border-cyan-300"
+          />
+          <button id="btn" class="rounded-full bg-white p-[0.9375rem]">
+            <img src="../images/search.png" class="h-auto w-3" />
+          </button>
+        </form>
+
+        <div id="app-body" class="h-0 overflow-hidden">
+          <div>
+            <!-- weather logo -->
+            <div class="weather-icon mt-6 w-full">
+              <img
+                id="weather-icon"
+                src="../images/clear.png"
+                class="mx-auto h-auto w-28"
+              />
+            </div>
+
+            <!-- temperature -->
+            <h1 class="mt-3 text-center text-5xl font-semibold text-white">
+              <span id="temperature">7</span><span class="text-4xl">°C</span>
+            </h1>
+
+            <!-- city name -->
+            <p
+              id="city"
+              class="capitalize` my-3 mb-5 text-center text-3xl text-white"
+            >
+              New York
+            </p>
+          </div>
+
+          <!-- footer -->
+          <footer class="flex items-center justify-between">
+            <div class="humidity flex items-center gap-3">
+              <div>
+                <img src="../images/humidity.png" class="h-auto w-7" />
+              </div>
+              <div class="flex flex-col items-center text-white">
+                <span id="humidity" class="mt-2 text-xl font-medium">48%</span>
+                <span class="text-xs font-light capitalize">Humidity</span>
+              </div>
+            </div>
+
+            <div class="wind-speed flex items-center gap-3">
+              <div>
+                <img src="../images/wind.png" class="h-auto w-7" />
+              </div>
+              <div class="flex flex-col items-center text-white">
+                <span id="wind-speed" class="mt-3 text-lg">17.29km/h</span>
+                <span class="text-xs font-light capitalize">wind Speed</span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
